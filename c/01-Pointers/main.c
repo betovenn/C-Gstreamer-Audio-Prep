@@ -5,13 +5,14 @@ int minmax(const int *arr, size_t n, int *min, int *max); /* 0 = ok, -1 = error 
 long suma_indices(const int *arr, size_t n);
 long suma_punteros(const int *arr, size_t n);
 
-int minmax(const int *arr, size_t n, int *min, int *max);
 
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
+
+int minmax(const int *arr, size_t n, int *min, int *max);
 
 int main() {
 
