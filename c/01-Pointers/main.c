@@ -58,6 +58,13 @@ void print_array(const int * arr, size_t n) {
     printf("]\n");
 }
 
+void print_address(const int * arr, size_t n) {
+    for (size_t i = 0; i < n; i++) {
+        const int *p = (arr + i);
+        printf("%p\n", (void *)p);
+    }
+}
+
 void verificar_suma(long sum1,long sum2) {
     if (sum1 == sum2)
         printf("Correct\n");
@@ -157,6 +164,8 @@ int main(void) {
     int valor3 = minmax(negative_values, negative_values_n, &min, &max);
     verificar_minmax(valor3);
     printf("Valores negativos\n");
+    printf("Direcciones\n");
+    print_address(negative_values, negative_values_n);
     print_array(negative_values,negative_values_n);
     printf("min:%d\n", min);
     printf("max:%d\n", max);
